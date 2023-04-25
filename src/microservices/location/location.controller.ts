@@ -16,7 +16,7 @@ import {
   ApiBody,
   ApiQuery,
 } from '@nestjs/swagger';
-import {PermissionAction, Prisma, Location} from '@prisma/client';
+import {Prisma, Location} from '@prisma/client';
 import {LocationService} from './location.service';
 
 @ApiTags('[Microservice] Location')

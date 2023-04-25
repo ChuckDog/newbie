@@ -15,7 +15,7 @@ import {
   ApiBody,
   ApiQuery,
 } from '@nestjs/swagger';
-import {WorkflowRoute, Prisma, PermissionAction} from '@prisma/client';
+import {WorkflowRoute, Prisma} from '@prisma/client';
 import {WorkflowRouteService} from './route.service';
 
 @ApiTags('[Microservice] Workflow / Route')

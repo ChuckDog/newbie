@@ -8,7 +8,7 @@ import {
   Param,
 } from '@nestjs/common';
 import {ApiTags, ApiBearerAuth, ApiParam, ApiBody} from '@nestjs/swagger';
-import {WorkflowState, Prisma, PermissionAction} from '@prisma/client';
+import {WorkflowState, Prisma} from '@prisma/client';
 import {WorkflowStateService} from './state.service';
 
 @ApiTags('[Microservice] Workflow / State')
