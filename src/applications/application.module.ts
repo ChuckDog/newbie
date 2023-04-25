@@ -5,9 +5,6 @@ import {ElasticModule} from '../toolkits/elastic/elastic.module';
 import {PrismaModule} from '../toolkits/prisma/prisma.module';
 import {TokenModule} from '../toolkits/token/token.module';
 import {AccountModule} from './account/account.module';
-import {EnginedModule} from './engined/engined.module';
-import {FileManagementModule} from './fmgmt/fmgmt.module';
-import {ProjectManagementModule} from './pmgmt/pmgmt.module';
 import {AuthenticationGuard} from './account/authentication/authentication.guard';
 import {AuthorizationGuard} from './account/authorization/authorization.guard';
 import {AllExceptionsFilter} from '../_filter/_all-exceptions.filter';
@@ -26,9 +23,6 @@ import {ApplicationController} from './application.controller';
 
     // Application
     AccountModule,
-    EnginedModule,
-    FileManagementModule,
-    ProjectManagementModule,
   ],
   providers: [
     //Guards
