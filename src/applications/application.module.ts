@@ -8,7 +8,6 @@ import {AccountModule} from './account/account.module';
 import {EnginedModule} from './engined/engined.module';
 import {FileManagementModule} from './fmgmt/fmgmt.module';
 import {ProjectManagementModule} from './pmgmt/pmgmt.module';
-import {RecruitmentModule} from './recruitment/recruitment.module';
 import {AuthenticationGuard} from './account/authentication/authentication.guard';
 import {AuthorizationGuard} from './account/authorization/authorization.guard';
 import {AllExceptionsFilter} from '../_filter/_all-exceptions.filter';
@@ -30,7 +29,6 @@ import {ApplicationController} from './application.controller';
     EnginedModule,
     FileManagementModule,
     ProjectManagementModule,
-    RecruitmentModule,
   ],
   providers: [
     //Guards

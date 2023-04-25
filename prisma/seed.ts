@@ -1,6 +1,5 @@
 import {
   ElasticsearchDatasource,
-  PermissionAction,
   PostgresqlDatasource,
   Prisma,
   TrustedEntityType,
@@ -149,14 +148,6 @@ async function main() {
         });
       }
     }
-    // [Create permissions] In the pending request screen, each role(except Admin) can only see the requests with testings those are waiting to be processed by the role.
-    await permissionController.createPermission({
-      action: PermissionAction.read,
-      resource: Prisma.ModelName.JobApplication,
-      where: {workflows: {some: {nextRoleId: role.id}}},
-      trustedEntityType: TrustedEntityType.ROLE,
-      trustedEntityId: role.id,
-    });
 
     if (role.name === RoleName.Admin) {
       // Create user with this role.
