@@ -1,17 +1,17 @@
 import {Controller, Get} from '@nestjs/common';
 import {ApiTags} from '@nestjs/swagger';
-import {Public} from './account/authentication/public/public.decorator';
+// import {Public} from './account/authentication/public/public.decorator';
 
 @ApiTags('[Application]')
 @Controller()
 export class ApplicationController {
-  @Public()
+  // @Public()
   @Get('')
   hello(): string {
     return '<h1>Welcome to Newbie!</h1>';
   }
 
-  @Public()
+  // @Public()
   @Get('manifesto')
   manifesto(): string {
     return `
@@ -21,7 +21,7 @@ export class ApplicationController {
     `;
   }
 
-  @Public()
+  // @Public()
   @Get('todo')
   todo(): string {
     return `

@@ -4,9 +4,6 @@ import {AwsModule} from '../toolkits/aws/aws.module';
 import {ElasticModule} from '../toolkits/elastic/elastic.module';
 import {PrismaModule} from '../toolkits/prisma/prisma.module';
 import {TokenModule} from '../toolkits/token/token.module';
-import {AccountModule} from './account/account.module';
-import {AuthenticationGuard} from './account/authentication/authentication.guard';
-import {AuthorizationGuard} from './account/authorization/authorization.guard';
 import {AllExceptionsFilter} from '../_filter/_all-exceptions.filter';
 import {HttpExceptionFilter} from '../_filter/_http-exception.filter';
 import {PrismaExceptionFilter} from '../_filter/_prisma-exception.filter';
@@ -22,12 +19,11 @@ import {ApplicationController} from './application.controller';
     TokenModule,
 
     // Application
-    AccountModule,
   ],
   providers: [
-    //Guards
-    {provide: APP_GUARD, useClass: AuthenticationGuard}, // 1st priority guard.
-    {provide: APP_GUARD, useClass: AuthorizationGuard}, // 2nd priority guard.
+    // Guards
+    // {provide: APP_GUARD, useClass: AuthenticationGuard}, // 1st priority guard.
+    // {provide: APP_GUARD, useClass: AuthorizationGuard}, // 2nd priority guard.
 
     //Filters
     {provide: APP_FILTER, useClass: AllExceptionsFilter}, // 3rd priority for all exceptions.
